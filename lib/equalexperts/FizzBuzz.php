@@ -22,6 +22,8 @@ abstract class FizzBuzz
         $fizzOrBuzz = '';
         if ($value % 3 === 0)
             $fizzOrBuzz = 'Fizz';
+        if ($value % 5 === 0)
+            $fizzOrBuzz = 'Buzz';
 
         return $fizzOrBuzz;
     }
