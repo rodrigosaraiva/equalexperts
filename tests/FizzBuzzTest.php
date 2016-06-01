@@ -13,11 +13,12 @@ use EqualExperts\FizzBuzz;
 class FizzBuzzTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @test test_if_fizz_buzz
+     * @test test_if_print_correctly_fizz_buzz
      */
-    public function test_if_fizz_buzz()
+    public function test_if_print_correctly_fizz_buzz()
     {
         $this->assertEquals('Fizz', FizzBuzz::fizzBuzz(3));
         $this->assertEquals('Buzz', FizzBuzz::fizzBuzz(5));
+        $this->assertEquals('FizzBuzz', FizzBuzz::fizzBuzz(15));
     }
 }
