@@ -19,6 +19,10 @@ abstract class FizzBuzz
      */
     public static function fizzBuzz($value)
     {
-        return (string) $value;
+        $fizzOrBuzz = '';
+        if ($value % 3 === 0)
+            $fizzOrBuzz = 'Fizz';
+
+        return $fizzOrBuzz;
     }
 }
