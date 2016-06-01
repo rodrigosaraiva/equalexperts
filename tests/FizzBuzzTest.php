@@ -39,6 +39,12 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
      */
     public function test_count_fizz_buzz_lucky_any()
     {
-        
+        $fizzBuzz = new FizzBuzz();
+        for ($x=1;$x<=50;$x++)
+            $fizzBuzz->fizzBuzz($x);
+        $this->assertEquals(4, $fizzBuzz->getCountFizz());
+        $this->assertEquals(3, $fizzBuzz->getCountBuzz());
+        $this->assertEquals(2, $fizzBuzz->getCountLucky());
+        $this->assertEquals(10, $fizzBuzz->getCountInteger());
     }
 }
