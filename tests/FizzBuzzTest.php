@@ -44,6 +44,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
             $fizzBuzz->fizzBuzz($x);
         $this->assertEquals(4, $fizzBuzz->getCountFizz());
         $this->assertEquals(3, $fizzBuzz->getCountBuzz());
+        $this->assertEquals(1, $fizzBuzz->getCountBuzz());
         $this->assertEquals(2, $fizzBuzz->getCountLucky());
         $this->assertEquals(10, $fizzBuzz->getCountInteger());
     }
