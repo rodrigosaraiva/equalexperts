@@ -9,8 +9,88 @@
 namespace EqualExperts;
 
 
-abstract class FizzBuzz
+class FizzBuzz
 {
+    /**
+     * @var int
+     */
+    private $countFizz = 0;
+    /**
+     * @var int
+     */
+    private $countBuzz = 0;
+    /**
+     * @var int
+     */
+    private $countLucky = 0;
+    /**
+     * @var int
+     */
+    private $countInteger = 0;
+
+    /**
+     * @return int
+     */
+    public function getCountFizz()
+    {
+        return $this->countFizz;
+    }
+
+    /**
+     * @param int $countFizz
+     */
+    public function setCountFizz($countFizz)
+    {
+        $this->countFizz = $countFizz;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCountBuzz()
+    {
+        return $this->countBuzz;
+    }
+
+    /**
+     * @param int $countBuzz
+     */
+    public function setCountBuzz($countBuzz)
+    {
+        $this->countBuzz = $countBuzz;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCountLucky()
+    {
+        return $this->countLucky;
+    }
+
+    /**
+     * @param int $countLucky
+     */
+    public function setCountLucky($countLucky)
+    {
+        $this->countLucky = $countLucky;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCountInteger()
+    {
+        return $this->countInteger;
+    }
+
+    /**
+     * @param int $countInteger
+     */
+    public function setCountInteger($countInteger)
+    {
+        $this->countInteger = $countInteger;
+    }
     /**
      * fizzBuzz
      *

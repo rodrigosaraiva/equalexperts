@@ -17,10 +17,11 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
      */
     public function test_if_print_correctly_fizz_buzz()
     {
-        $this->assertEquals('Fizz', FizzBuzz::fizzBuzz(21));
-        $this->assertEquals('Buzz', FizzBuzz::fizzBuzz(5));
-        $this->assertEquals('FizzBuzz', FizzBuzz::fizzBuzz(15));
-        $this->assertEquals('4', FizzBuzz::fizzBuzz(4));
+        $fizzBuzz = new FizzBuzz();
+        $this->assertEquals('Fizz', $fizzBuzz->fizzBuzz(21));
+        $this->assertEquals('Buzz', $fizzBuzz->fizzBuzz(5));
+        $this->assertEquals('FizzBuzz', $fizzBuzz->fizzBuzz(15));
+        $this->assertEquals('4', $fizzBuzz->fizzBuzz(4));
     }
 
     /**
@@ -28,7 +29,16 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
      */
     public function test_if_number_has_3()
     {
-        $this->assertEquals('Lucky', FizzBuzz::fizzBuzz(3));
-        $this->assertEquals('Lucky', FizzBuzz::fizzBuzz(23));
+        $fizzBuzz = new FizzBuzz();
+        $this->assertEquals('Lucky', $fizzBuzz->fizzBuzz(3));
+        $this->assertEquals('Lucky', $fizzBuzz->fizzBuzz(23));
+    }
+
+    /**
+     * @test test_count_fizz_buzz_lucky_any
+     */
+    public function test_count_fizz_buzz_lucky_any()
+    {
+        
     }
 }
