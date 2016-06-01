@@ -19,12 +19,15 @@ abstract class FizzBuzz
      */
     public static function fizzBuzz($value)
     {
-        if ($value % 15 === 0)
-            return 'FizzBuzz';
-        if ($value % 3 === 0)
-            return 'Fizz';
-        if ($value % 5 === 0)
-            return 'Buzz';
+        if (strpos($value, '3') === false) {
+            if ($value % 15 === 0)
+                return 'FizzBuzz';
+            if ($value % 3 === 0)
+                return 'Fizz';
+            if ($value % 5 === 0)
+                return 'Buzz';
+        } else
+            return 'Lucky';
 
         return (string) $value;
     }
