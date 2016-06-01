@@ -22,4 +22,14 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('FizzBuzz', FizzBuzz::fizzBuzz(15));
         $this->assertEquals('4', FizzBuzz::fizzBuzz(4));
     }
+
+    /**
+     * @test test_if_number_has_3
+     */
+    public function test_if_number_has_3()
+    {
+        $this->assertEquals('Lucky', FizzBuzz::fizzBuzz(3));
+        $this->assertEquals('Lucky', FizzBuzz::fizzBuzz(23));
+
+    }
 }
