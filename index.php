@@ -9,6 +9,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/lib/equalexperts/FizzBuzz.php';
 
 use EqualExperts\FizzBuzz;
 
-for ($x=1;$x<=50;$x++) {
-    print_r(FizzBuzz::fizzBuzz($x) . "&nbsp;");
+$fizzBuzz = new FizzBuzz();
+
+for ($x=1;$x<=20;$x++) {
+    print_r($fizzBuzz->fizzBuzz($x) . "&nbsp;");
 }

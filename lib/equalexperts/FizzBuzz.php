@@ -22,6 +22,10 @@ class FizzBuzz
     /**
      * @var int
      */
+    private $countFizzBuzz = 0;
+    /**
+     * @var int
+     */
     private $countLucky = 0;
     /**
      * @var int
@@ -59,7 +63,22 @@ class FizzBuzz
     {
         $this->countBuzz = $countBuzz;
     }
+    /**
+     * @return int
+     */
+    public function getCountFizzBuzz()
+    {
+        return $this->countFizzBuzz;
+    }
 
+    /**
+     * @param int $countBuzz
+     */
+    public function setCountFizzBuzz($countFizzBuzz)
+    {
+        $this->countFizzBuzz = $countFizzBuzz;
+    }
+    
     /**
      * @return int
      */
@@ -97,18 +116,26 @@ class FizzBuzz
      * @param integer $value
      * @return string
      */
-    public static function fizzBuzz($value)
+    public function fizzBuzz($value)
     {
         if (strpos($value, '3') === false) {
-            if ($value % 15 === 0)
+            if ($value % 15 === 0) {
+                $this->setCountFizzBuzz($this->getCountFizzBuzz()+1);
                 return 'FizzBuzz';
-            if ($value % 3 === 0)
-                return 'Fizz';
-            if ($value % 5 === 0)
+            }
+            if ($value % 5 === 0) {
+                $this->setCountBuzz($this->getCountBuzz()+1);
                 return 'Buzz';
-        } else
+            }
+            if ($value % 3 === 0) {
+                $this->setCountFizz($this->getCountFizz()+1);
+                return 'Fizz';
+            }
+        } else {
+            $this->setCountLucky($this->getCountLucky()+1);
             return 'Lucky';
-
+        }
+        $this->setCountInteger($this->getCountInteger()+1);
         return (string) $value;
     }
 }
